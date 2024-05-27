@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package calculator;
+
+message Brand {
+  string name = 1;
+}

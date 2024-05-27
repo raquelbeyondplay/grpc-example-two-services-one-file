@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package calculator;
+
+import "brand.proto";
+
+message CalculatorEmptyRequest {
+}
+
+message CalculatorResponse {
+  string name = 1;
+}
+
+message AdminEmptyRequest {}
+
+message AdminResponse {
+  Brand brand = 1;
+}
+
+
+service Calculator {
+  rpc GetAppVersion(CalculatorEmptyRequest) returns (CalculatorResponse);
+}
+
+service Admin {
+  rpc GetAdminUser(AdminEmptyRequest) returns (AdminResponse);
+}
